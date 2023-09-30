@@ -1,0 +1,117 @@
+.contact{
+    padding: 2em 0 7em 0;
+    min-height: auto;
+    background: $second-bg-color;
+    .heading{
+        font-size: 5em;
+        margin: 1em 0 2em 0;
+        text-align: center;
+        span{
+            color: $main-color;
+        }
+    }
+    form{
+        max-width: 70em;
+        margin: 0 auto;
+        text-align: center;
+        .input-box{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .input-field{
+                position: relative;
+                width: 49%;
+                margin: 0.8em 0;
+                .input{
+                    width: 100%;
+                    height: 100%; 
+                    padding: 1.5em;
+                    font-size: 1.6em;
+                    color: $text-color;
+                    background: transparent;
+                    border-radius: 0.5em;
+                    border: 0.2em solid $main-color;
+                    &::placeholder{
+                        color: $text-color;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+        .textarea-field{
+            position: relative;
+            margin: 0.8em 0 2.7em;
+            display: flex;
+            textarea{
+                width: 100%;
+                height: 100%; 
+                padding: 1.5em;
+                font-size: 1.6em;
+                color: $text-color;
+                background: transparent;
+                border-radius: 0.5em;
+                border: 0.2em solid $main-color;
+                resize: none;
+                &::placeholder{
+                          color: $text-color;
+                          opacity: 0.6; 
+                }
+            }
+        } 
+        .btn-box{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 5em;
+            .btn{
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 12em;
+                height: 100%;
+                background: $main-color;
+                border: 0.2em solid $main-color;
+                border-radius: 0.4em;
+                font-size: 1.8em;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                color: $bg-color;
+                margin: 0 4%;
+                z-index: 1;
+                overflow: hidden;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover{
+                    color: $main-color;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $second-bg-color;
+                    z-index: -1;
+                    transition: 0.5s;
+                }
+                &:hover::before{
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    background: transparent;
+                    color: $main-color;
+                    &::before{
+                        background: $main-color;
+                    }
+                    &:hover{
+                        color: $second-bg-color;
+                    }
+                }
+            }
+        }
+    }
+}
